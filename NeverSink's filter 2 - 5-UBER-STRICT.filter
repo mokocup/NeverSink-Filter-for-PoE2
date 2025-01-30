@@ -194,14 +194,14 @@ Show # %D6 $type->exoticbases $tier->commonexoticbaseshigh
 	PlayEffect Blue
 	MinimapIcon 1 Blue Diamond
 
-#Show # %D4 $type->exoticbases $tier->commonexoticbases
-#	Rarity Normal Magic
-#	BaseType == "Breach Ring"
-#	SetFontSize 38
-#	SetTextColor 0 70 255 255
-#	SetBorderColor 0 70 255 255
-#	PlayEffect Blue Temp
-#	MinimapIcon 2 Blue Diamond
+Show # %D4 $type->exoticbases $tier->commonexoticbases
+	Rarity Normal Magic Rare
+	BaseType == "Breach Ring"
+	SetFontSize 38
+	SetTextColor 0 70 255 255
+	SetBorderColor 0 70 255 255
+	PlayEffect Blue Temp
+	MinimapIcon 2 Blue Diamond
 
 # Sanctum keys
 
@@ -277,7 +277,7 @@ Show # %D5 $type->endgame->flasks $tier->toplevelqualityflasks
 	Mirrored False
 	Corrupted False
 	Quality > 10
-	ItemLevel >= 83
+	ItemLevel >= 81
 	Rarity Normal Magic
 	BaseType == "Ultimate Life Flask" "Ultimate Mana Flask"
 	AreaLevel >= 65
@@ -2054,7 +2054,7 @@ Show # %H5 $type->waystones $tier->waystone_t14
 	PlayEffect Yellow Temp
 	MinimapIcon 1 Yellow Square
 
-Hide # %HS3 $type->waystones $tier->waystone_t13
+Show # %HS3 $type->waystones $tier->waystone_t13
 	WaystoneTier 13
 	Class == "Waystones"
 	SetTextColor 0 0 0 255
@@ -2246,7 +2246,7 @@ Show # %H5 $type->currency $tier->d
 	PlayEffect White
 	MinimapIcon 2 White Circle
 
-Hide # %H3 $type->currency $tier->e
+Show # %H3 $type->currency $tier->e
 	Class == "Stackable Currency"
 	BaseType == "Arcanist's Etcher" "Blacksmith's Whetstone"
 	SetFontSize 40
@@ -2255,16 +2255,13 @@ Hide # %H3 $type->currency $tier->e
 
 # Artifacts and special drops
 
-Show # $type->currency $tier->artifactlike
+Hide # $type->currency $tier->artifactlike
 	Class == "Stackable Currency"
 	BaseType == "Black Scythe Artifact" "Broken Circle Artifact" "Order Artifact" "Sun Artifact"
 	SetFontSize 40
 	SetTextColor 240 207 132
 	SetBorderColor 240 207 132
 	SetBackgroundColor 76 51 12
-	PlayAlertSound 2 300
-	PlayEffect Yellow Temp
-	MinimapIcon 1 White Kite
 
 Hide # %H3 $type->currency $tier->supplymagic
 	Class == "Stackable Currency"
@@ -2427,14 +2424,14 @@ Show # %HS4 $type->currency->catalysts $tier->d
 	SetBorderColor 0 0 0 255
 	SetBackgroundColor 240 180 100 255
 
-Hide # %HS2 $type->currency->catalysts $tier->e
+Show # %HS2 $type->currency->catalysts $tier->e
 	Class == "Stackable Currency"
 	BaseType == "Carapace Catalyst" "Chayula's Catalyst" "Flesh Catalyst" "Sibilant Catalyst" "Uul-Netol's Catalyst" "Xoph's Catalyst"
 	SetFontSize 40
 	SetTextColor 240 207 132
 	SetBorderColor 240 207 132
 
-Hide # $type->currency->catalysts $tier->exhide
+Show # $type->currency->catalysts $tier->exhide
 	Class == "Stackable Currency"
 	BaseType == "Adaptive Catalyst" "Carapace Catalyst" "Chayula's Catalyst" "Esh's Catalyst" "Flesh Catalyst" "Neural Catalyst" "Reaver Catalyst" "Sibilant Catalyst" "Skittering Catalyst" "Tul's Catalyst" "Uul-Netol's Catalyst" "Xoph's Catalyst"
 	SetFontSize 18
@@ -2803,7 +2800,7 @@ Show # %HS4 $type->miscmapitemsextra $tier->trialkeysanctumtop
 	SetBorderColor 0 0 0 255
 	SetBackgroundColor 180 75 225 255
 
-Hide # %H4 $type->miscmapitemsextra $tier->trialkeysanctumhigh
+Show # %H4 $type->miscmapitemsextra $tier->trialkeysanctumhigh
 	ItemLevel >= 75
 	ItemLevel <= 79
 	BaseType == "Djinn Barya" "Test of Cunning Barya" "Test of Strength Barya" "Test of Time Barya" "Test of Will Barya"
@@ -2828,7 +2825,7 @@ Show # %HS4 $type->miscmapitemsextra $tier->trialkeyultimatumtop
 	SetBorderColor 0 0 0 255
 	SetBackgroundColor 180 75 225 255
 
-Hide # %H4 $type->miscmapitemsextra $tier->trialkeyultimatumhigh
+Show # %H4 $type->miscmapitemsextra $tier->trialkeyultimatumhigh
 	ItemLevel >= 75
 	ItemLevel <= 79
 	BaseType == "Inscribed Ultimatum"
@@ -2948,15 +2945,15 @@ Show # $type->uniques $tier->multispecial
 #------------------------------------
 # !! Waypoint c11.uniques.t1 : "Tierlist - Uniques - Low Tier Uniques"
 
-#Show # $type->uniques $tier->earlyleague
-#	Rarity Unique
-#	SetFontSize 42
-#	SetTextColor 188 96 37 255
-#	SetBorderColor 188 96 37 255
-#	SetBackgroundColor 53 13 13 255
-#	PlayAlertSound 3 300
-#	PlayEffect Brown
-#	MinimapIcon 1 Brown Star
+Show # $type->uniques $tier->earlyleague
+	Rarity Unique
+	SetFontSize 42
+	SetTextColor 188 96 37 255
+	SetBorderColor 188 96 37 255
+	SetBackgroundColor 53 13 13 255
+	PlayAlertSound 3 300
+	PlayEffect Brown
+	MinimapIcon 1 Brown Star
 
 Show # $type->uniques $tier->corrupteduniques
 	AnyEnchantment True
@@ -2972,7 +2969,7 @@ Show # $type->uniques $tier->corrupteduniques
 	MinimapIcon 1 Brown Star
 
 #------------------------------------
-#   [3005] Tier 3 uniques 
+#   [3005] Tier 3 uniques
 #------------------------------------
 
 Show # %H5 $type->uniques $tier->t3boss
@@ -3001,7 +2998,7 @@ Show # %H5 $type->uniques $tier->t3
 #   [3006] Tier 4 uniques
 #------------------------------------
 
-Hide # %H4 $type->uniques $tier->hideable
+Show # %H4 $type->uniques $tier->hideable
 	Rarity Unique
 	BaseType == "Aged Cuffs" "Anchorite Garb" "Ashen Staff" "Attuned Wand" "Beaded Circlet" "Blazon Crest Shield" "Bone Raiment" "Bone Wand" "Braced Sabatons" "Braced Tower Shield" "Broadhead Quiver" "Bronze Greaves" "Chain Mail" "Cloaked Mail" "Covert Hood" "Cowled Helm" "Crescent Targe" "Crumbling Maul" "Crystal Focus" "Cultist Crown" "Doubled Gauntlets" "Effigial Tower Shield" "Elite Greathelm" "Emblem Crest Shield" "Embossed Boots" "Engraved Focus" "Face Mask" "Feathered Robe" "Feathered Sandals" "Felled Greatclub" "Fine Belt" "Fire Quiver" "Firm Bracers" "Forge Maul" "Full Plate" "Fur Plate" "Garment" "Gauze Wraps" "Gelid Staff" "Gilded Vestments" "Goldcast Cuffs" "Gothic Quarterstaff" "Guarded Helm" "Hardwood Targe" "Hermit Garb" "Hewn Mask" "Hexer's Robe" "Hooded Mask" "Horned Crown" "Hunter Hood" "Hunting Shoes" "Intricate Gloves" "Iron Crown" "Iron Cuirass" "Iron Greaves" "Ironclad Vestments" "Jewelled Gloves" "Jingling Crest Shield" "Keth Raiment" "Lace Hood" "Laced Boots" "Layered Gauntlets" "Leaden Greathammer" "Leather Vest" "Linen Belt" "Lizardscale Boots" "Long Belt" "Mail Belt" "Mail Sabatons" "Mail Vestments" "Makeshift Crossbow" "Marabout Garb" "Maraketh Cuirass" "Martyr Crown" "Oak Greathammer" "Omen Sceptre" "Painted Tower Shield" "Pathfinder Coat" "Pelage Targe" "Plate Belt" "Plated Mace" "Pyrophyte Staff" "Quilted Vest" "Raider Plate" "Rampart Tower Shield" "Rattling Sceptre" "Recurve Bow" "Rhoahide Coat" "Ringmail Gauntlets" "Riveted Mitts" "Rogue Armour" "Rope Cuffs" "Rough Greaves" "Rusted Cuirass" "Rusted Greathelm" "Scale Mail" "Scout's Vest" "Sectioned Bracers" "Secured Leggings" "Serpentscale Coat" "Shabby Hood" "Shaman Mantle" "Shielded Helm" "Silk Slippers" "Slim Mace" "Smithing Hammer" "Soldier Greathelm" "Sombre Gloves" "Spiritbone Crown" "Splintered Tower Shield" "Stacked Sabatons" "Steel Plate" "Steelpoint Quarterstaff" "Steeltoe Boots" "Stitched Gloves" "Stone Greaves" "Straw Sandals" "Studded Greatclub" "Studded Vest" "Suede Bracers" "Tattered Robe" "Tempered Mitts" "Tense Crossbow" "Tonal Focus" "Torn Gloves" "Twig Circlet" "Twig Focus" "Vagabond Armour" "Veiled Mask" "Visceral Quiver" "Visored Helm" "Voltaic Staff" "Votive Raiment" "Warrior Greathelm" "Waxed Jacket" "Wayfarer Jacket" "Wicker Tiara" "Wide Belt" "Wooden Club" "Woven Focus" "Wrapped Quarterstaff" "Wrapped Sandals"
 	SetFontSize 40
